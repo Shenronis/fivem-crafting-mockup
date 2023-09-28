@@ -1,0 +1,293 @@
+/*= Reset CSS 
+============= */
+html, body {border: 0; margin: 0; padding: 0;}
+body {font: 14px "Lato", Arial, sans-serif; color: #666;}
+.container{margin: 0 auto; max-width: 1200px;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+h2{text-align: center; color: #2079df; font-size: 28px; float: left; width: 100%; margin: 30px 0; position: relative; line-height: 58px; font-weight: 400;}
+h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 2px; background-color: #2079df; margin-left: -50px;}
+/*= Reset CSS End
+================= */
+
+html {
+    height: 100%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('temp_bg.webp');
+    /* background-image: url('Untitled.png'); */
+
+    font-family: 'Be Vietnam Pro';
+}
+
+*::-webkit-scrollbar {
+    background: rgba(0,0,0,0 );
+    width: 6px;
+    border-radius: 8px;    
+}
+*::-webkit-scrollbar-thumb {
+    background: rgba( 255, 255, 255, 0.2 );
+    width: 6px;
+    border-radius: 8px;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.flex-containter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    width: 1000px;
+    height: 660px;
+    padding: 24px;
+    
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.recipe {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: rgb(255,255,255);
+    background: linear-gradient(156deg, rgba(255,255,255,0.3) 0%, rgba(116,116,116,0.5) 100%);
+}
+
+.category-btn {
+    width: 100%;
+    height: 40px;
+    border: 0px solid rgba( 255, 255, 255, 0.5 );    
+    border-radius: 8px;
+    background: rgba( 255, 255, 255, 0.5 );
+
+    color: black;
+    font-size: 18px;
+}
+#category .col {
+    flex: 1;
+    transition: flex 0.5s ease-out;
+}
+#category .col:hover {
+    flex: 1.2;
+}
+#category .col.active
+{
+    flex: 1.5;
+}
+#category .col.active *
+{
+    flex: 1.5;
+    color: whitesmoke;
+}
+#category .col button {
+    transition: 0.05s ease-in-out;
+}
+#category .col button:hover {
+    border: 2px solid rgba( 255, 255, 255, 0.5 );
+}
+
+.blueprint-btn {
+    width: 120px;
+    height: 120px;
+    padding: 8px;
+    border-radius: 16px;
+    background: rgba( 255, 255, 255, 0.2 );
+    border: 0;
+    color: whitesmoke;
+    
+    position: relative;
+    transition: all 0.2s ease-in;
+}
+.blueprint-btn:hover {
+    transform: scale(1.1, 1.1);
+    border: 2px solid rgba( 255, 255, 255, 0.5 );
+    box-shadow: 4px 6px 4px 1px rgba(0, 0, 0, 0.3);
+}
+.blueprint-btn:active {
+    transform: scale(1.1, 1.1);    
+}
+.blueprint-label {
+    position: absolute;
+    top: 10%;
+    left: 11%;
+    width: 80%;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+}
+.blueprint-amount {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    text-align: right;    
+}
+.blueprint-img-holder {
+    position: absolute;
+    top: 30%;
+    width: 85%;
+    font-size: 14px;
+    text-align: center;
+}
+.blueprint-img {
+    width: 60%;
+    width: 60%;
+}
+
+.item-box{
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 8px;
+}
+#item-amount {
+    font-size: 14px;
+    color: whitesmoke;
+    text-align: right;
+}
+#item-name {
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.recipe-item {
+    display: flex;
+    margin: 4px 0px;
+    padding: 10px 12px;
+    border-radius: 18px;
+
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in;
+}
+
+.recipe-item:not(.nocursor):hover {
+    transform: scale(0.98);
+}
+
+.recipe-item i {
+    font-size: 16px;
+    color: rgba( 255, 255, 255, 0.5 );
+    float: right;
+    margin-top: -16px;
+    padding-right: 10px;
+}
+.recipe-item.nocursor {
+    cursor: default;
+}
+.recipe-item.invalid {
+    background-color: #ff001925;
+}
+.recipe-item img {
+    width: 50px;
+    height: 50px;
+}
+.recipe-item-label, .recipe-item-quantity {
+    line-height: 50px;
+    vertical-align: middle;
+    color: whitesmoke
+}
+.recipe-item-name {
+    text-align: center;
+}
+.recipe-item-quantity {
+    text-align: right;
+}
+
+
+.confirmation button {
+    height: 38px;
+    /* background: rgba( 255, 255, 255, 0.5 ); */
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in;    
+}
+.confirmation :nth-child(1) {
+    font-size: 24px;
+    border-radius: 8px 0 0 8px;    
+}
+.confirmation :nth-child(1):hover:enabled {
+    color: #dc3545;
+}
+.confirmation :nth-child(2) {
+    height: 38px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    line-height: 38px;
+}
+.confirmation :nth-child(3) {
+    font-size: 24px;
+    border-radius: 0 8px 8px 0;
+    margin-right: 8px;
+}
+.confirmation :nth-child(3):hover:enabled {
+    color:#198754;
+}
+.confirmation :nth-child(4) {
+    border-radius: 8px;
+}
+.confirmation :nth-child(4):hover:enabled {
+    color: #0d6efd;
+}
+
+.confirmation :nth-child(1):active:not(:enabled),
+.confirmation :nth-child(3):active:not(:enabled),
+.confirmation :nth-child(4):active:not(:enabled)
+{
+    background-color: #dc3545;
+}
+
+#craft {
+    height: 40px;
+    line-height: 48px;
+    border-radius: 8px;
+    border: 0;
+    font-size: 24px;
+
+    transition: box-shadow 0.4s ease-out, color 0.2s ease-in, background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+#craft:hover:enabled {
+    color: #198754;
+    box-shadow: 0px 1px 8px 3px #1abc9c;
+}
+
+#craft:active:enabled{
+    transform: scale(1.05);
+}
+
+#craft:active:not(:enabled) {
+    background-color: #dc3545;
+}
