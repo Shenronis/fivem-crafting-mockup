@@ -31,7 +31,7 @@ const recipes = {
     "ap_pistol":
         {
             type: "weapon",
-            label: "AP Pistol hoặc cây súng này có tên dài",
+            label: "AP Pistol",
             amount: 1,
             img: "icons-main\\weapons\\pistol\\weapon_appistol.png",
             recipe: {
