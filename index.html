@@ -18,7 +18,7 @@
         <div class="panel">
             <div class="container-fluid" style="width: 100%; height: 100%;">
                 <div class="row" style="height: 100%; overflow-y: hidden;">                    
-                    <div class="col-6" style="border-right: 2px solid rgb(255,255,255,.2);">
+                    <div class="col-6">
                         <!-- Category section -->
                         <div id="category" class="w-50 row gx-1" style="height: 10%;">
                             <div id="weapon" class="col">
@@ -33,12 +33,14 @@
                         </div>
 
                         <!-- Blueprint list section -->
-                        <div id="blueprint" class="container" style="float:left; height: 550px; overflow-y: auto;">
-                            <div id="blueprint-list" class="row" >                                
+                        <div id="blueprint" class="container h-100" style="overflow-y: auto;">
+                            <div id="blueprint-list" class="row" >
                                 <!-- 
                                     <button class="blueprint-btn col-3 m-2 flex-container">
                                     <div class="blueprint-label">`+Template+`</div>
-                                    <div class="blueprint-img-holder"><img class="blueprint-img" src="icons-main/medical/bandage.png" alt=""></div>
+                                    <div class="blueprint-img-holder">
+                                        <img class="blueprint-img" src="icons-main/medical/bandage.png" alt="">
+                                    </div>
                                     <div class="blueprint-amount">x1</div>
                                 </button>                                 
                                 -->
@@ -50,20 +52,22 @@
                         <div class="container h-100">
                             <!-- Item Showcase -->
                             <div id="item" class="row align-items-center justify-content-center">
-                                <div class="item-box mb-2 p-2">
-                                    <div class="text-center" style="height: 80%"><img id="item-img" class="item-img" src="" alt=""></div>
-                                    <div id="item-amount" style="height: 10%;"> &#160 </div>
+                                <div class="item-box mb-3 p-2">
+                                    <div style="height: 100%; display:flex;align-items: center;justify-content: center;">
+                                        <img id="item-img" class="item-img" src="" alt="">
+                                    </div>
+                                    <div id="item-amount"> &#160 </div>
                                 </div>
                                 <div id="item-name"> &#160 </div>
                             </div>
 
                             <!-- Divider -->
                             <div class="row mt-3 align-items-center justify-content-center">
-                                <hr class="w-75" style="border: 1px solid rgb(255,255,255,.5); border-radius: 4px;">
+                                <hr class="w-75" style="border: 1px solid rgba(0, 0, 0, 0.8); border-radius: 4px;">
                             </div>
                             
                             <!-- Recipe -->
-                            <div class="container" style="height: 280px; overflow-y: auto;">
+                            <div class="container recipe-container">
                                 <div id="recipe-list" class="row">
                                     
                                     <!-- <button class="recipe-item invalid">                                        
@@ -85,7 +89,7 @@
                             </div>
 
                             <div class="row mt-3 align-items-center justify-content-center">
-                                <hr class="w-75" style="border: 1px solid rgb(255,255,255,.5); border-radius: 4px;">
+                                <hr class="w-75" style="border: 1px solid rgba(0, 0, 0, 0.8); border-radius: 4px;">
                             </div>
 
                             <!-- Confirmations -->
